@@ -872,6 +872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: beetle
       objectReference: {fileID: 0}
+    - target: {fileID: 7005254219658934287, guid: 04c4e6f2d8f7e0245a2395e1d85a708f, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c4e6f2d8f7e0245a2395e1d85a708f, type: 3}
 --- !u!1001 &6204473058915058237
@@ -881,6 +885,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1747125511777765423, guid: a5918d8523b57c947b76710e171b1faf, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6204473059099497477, guid: a5918d8523b57c947b76710e171b1faf, type: 3}
       propertyPath: m_RootOrder
       value: 7
