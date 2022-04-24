@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 244206403}
   - component: {fileID: 244206402}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: up bound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 476927607}
   - component: {fileID: 476927606}
   m_Layer: 0
-  m_Name: Square
+  m_Name: left bound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -443,6 +443,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1646943727}
+  leftBound: {fileID: 476927608}
+  rightBound: {fileID: 821819245}
+  upBound: {fileID: 244206404}
+  downBound: {fileID: 2070358454}
 --- !u!1 &821819242
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +459,7 @@ GameObject:
   - component: {fileID: 821819244}
   - component: {fileID: 821819243}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: right bound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -714,7 +718,7 @@ GameObject:
   - component: {fileID: 2070358453}
   - component: {fileID: 2070358452}
   m_Layer: 0
-  m_Name: Square (3)
+  m_Name: down bound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
