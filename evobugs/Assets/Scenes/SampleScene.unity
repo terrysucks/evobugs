@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 244206402}
   m_Layer: 0
   m_Name: up bound
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 476927606}
   m_Layer: 0
   m_Name: left bound
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 821819243}
   m_Layer: 0
   m_Name: right bound
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1015,7 +1015,7 @@ GameObject:
   - component: {fileID: 2070358452}
   m_Layer: 0
   m_Name: down bound
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1203,6 +1203,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: beetle
       objectReference: {fileID: 0}
+    - target: {fileID: 3018080551967826353, guid: 04c4e6f2d8f7e0245a2395e1d85a708f, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c4e6f2d8f7e0245a2395e1d85a708f, type: 3}
 --- !u!1001 &6204473058915058237
@@ -1259,6 +1263,10 @@ PrefabInstance:
     - target: {fileID: 6204473059099497486, guid: a5918d8523b57c947b76710e171b1faf, type: 3}
       propertyPath: m_Name
       value: spider
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204473059099497486, guid: a5918d8523b57c947b76710e171b1faf, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5918d8523b57c947b76710e171b1faf, type: 3}
