@@ -234,6 +234,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &247114622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3018080551967826353, guid: 04c4e6f2d8f7e0245a2395e1d85a708f, type: 3}
+  m_PrefabInstance: {fileID: 3018080552129661647}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &476927605
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +452,54 @@ MonoBehaviour:
   rightBound: {fileID: 821819245}
   upBound: {fileID: 244206404}
   downBound: {fileID: 2070358454}
+--- !u!1 &554166350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554166352}
+  - component: {fileID: 554166351}
+  m_Layer: 0
+  m_Name: randomSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &554166351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554166350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a99315c1889714348bf7392f685c731d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 7
+  enemyArray:
+  - {fileID: 247114622}
+  - {fileID: 889607731}
+--- !u!4 &554166352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554166350}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.9942621, y: 0.03563527, z: -0.59385115}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &821819242
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +611,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &889607731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6204473059099497486, guid: a5918d8523b57c947b76710e171b1faf, type: 3}
+  m_PrefabInstance: {fileID: 6204473058915058237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1646943724
 GameObject:
   m_ObjectHideFlags: 0
