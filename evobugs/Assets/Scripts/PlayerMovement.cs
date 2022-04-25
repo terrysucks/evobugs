@@ -13,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveDirection;
     private Vector2 mousePosition;
 
+    [SerializeField]   //<-- makes the fields visible in the unity inspector
+    private int points = 1000;
+    private bool hit = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,4 +57,23 @@ public class PlayerMovement : MonoBehaviour
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 180f;
         rb.rotation = aimAngle;
     }
+
+
+//[+] ----------- Code for Taking Damage-------------[+]
+//NOTE: make sue "is trigger" box is checked in the 'Box Collider 2D" component in the inspector
+    IEnumerator HitBoxOff(){
+        hit= false;
+        yield return new WaitForSeconds(1.5f);
+    }
+    void OnTriggerEnter2D(Collider2D target){
+        if(target.tag == "enemy"){
+            if(hit){ 
+                points--;
+            }
+        }
+    }
+//[+]------------------------------------------------[+]
+
+
+
 }
