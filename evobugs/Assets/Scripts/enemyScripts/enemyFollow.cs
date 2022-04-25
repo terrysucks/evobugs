@@ -8,9 +8,10 @@ public class enemyFollow : MonoBehaviour
     public float speed;
     private Transform playerPos;
     private Transform enemyPos;
+    private Transform foodPos;
     public GameObject[] mobPositionArr;
 
-    public float distFromPlayer, distFromMob;
+    public float distFromPlayer, distFromMob, distFromFood;
 
     WaitForSeconds starveInterval= new WaitForSeconds(1);
 
@@ -31,9 +32,8 @@ public class enemyFollow : MonoBehaviour
     {
         //player position
         playerPos = GameObject.FindWithTag("Player").transform;
-
-        //position of other enemies
         enemyPos = GameObject.FindWithTag("enemy").transform;
+        foodPos = GameObject.FindWithTag("food").transform;
         //mobPositionArr = GameObject.FindGameObjectsWithTag("enemy");
     }
 
@@ -43,24 +43,35 @@ public class enemyFollow : MonoBehaviour
         // if enemy is a certain distance from player/other enemy, move towards player/other enemy
         distFromPlayer = Vector2.Distance(transform.position, playerPos.position);
         distFromMob = Vector2.Distance(transform.position, enemyPos.position);
+        distFromFood = Vector2.Distance(transform.position, foodPos.position);
 
 
-        if(distFromPlayer > .25f)
-            transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed*Time.deltaTime);
-        // else{
+        if(distFromPlayer > .5f)
+            transform.position = Vector2.MoveTowards(transform.position, playerPos.position, 2*speed*Time.deltaTime);
+        else{
+            if ( (counter%100) == 0){ points+=10; }
+        }
+        // // else{
         //     transform.position = Vector2.MoveTowards(transform.position, playerPos.position, -2*speed*Time.deltaTime);
         // }
 
-        if((distFromMob > 3f)   )
+        if((distFromMob > 4f)   )
             transform.position = Vector2.MoveTowards(transform.position, enemyPos.position, speed*Time.deltaTime);
-        // else{
-        //     transform.position = Vector2.MoveTowards(transform.position, enemyPos.position, -5*speed*Time.deltaTime);
-        // }
+
+
+        if((distFromFood > .25f)   )
+            transform.position = Vector2.MoveTowards(transform.position, foodPos.position, speed*Time.deltaTime);
+        else{
+            if ( (counter%100) == 0){ points+=5; }
+        }
+
+
+
 
         if( counter > 10000){counter = 0;}
         else{ counter++; }
-        
-        if ( (counter%50) == 0){
+
+        if ( (counter%100) == 0){
             StartCoroutine(Starve());
         }
         
@@ -79,8 +90,12 @@ public class enemyFollow : MonoBehaviour
                 points--;
             }
         }
+        else if(target.tag == "food"){
+            if(hit){ 
+                points++;
+            }
+        }
     }
-
 
     IEnumerator Starve(){
         int i= 100;
